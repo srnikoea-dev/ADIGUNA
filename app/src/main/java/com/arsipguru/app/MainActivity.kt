@@ -198,7 +198,12 @@ fun AppRoot(vm: ArchiveViewModel) {
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Text("Tambah dokumen", fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                ActionCard("📷", "Scan dokumen", "Foto kertas jadi PDF rapi, otomatis terpotong") {
-                    showAdd = false; startScan()
-                }
-                ActionCard("📂", "Impor dari file", "Pilih
+                ActionCard("\uD83D\uDCF7", "Scan dokumen", "Foto kertas jadi PDF rapi, otomatis terpotong") {
+    showAdd = false
+    startScan()
+}
+ActionCard("\uD83D\uDCC2", "Impor dari file", "Pilih PDF, Word, Excel, gambar, dan lainnya") {
+    showAdd = false
+    picker.launch(arrayOf("*" + "/" + "*"))
+}
+               
