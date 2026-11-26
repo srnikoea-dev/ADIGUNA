@@ -298,7 +298,7 @@ fun HomeScreen(
                 ) {
                     Column(Modifier.statusBarsPadding().padding(24.dp, 20.dp, 24.dp, 24.dp)) {
                         Text("Halo, Bapak/Ibu Guru 👋", color = Color.White.copy(alpha = .85f), fontSize = 14.sp)
-                        Text("ADIGUNA", color = Color.White, fontSize = 32.sp, fontWeight = FontWeight.ExtraBold)
+                        Text("BerkasKu", color = Color.White, fontSize = 45.sp, fontWeight = FontWeight.ExtraBold)
                         Text("Arsip Digital Guru Andal", color = Color.White.copy(alpha = .85f), fontSize = 13.sp)
                         Spacer(Modifier.height(16.dp))
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -316,14 +316,14 @@ fun HomeScreen(
                 Box(Modifier.fillMaxWidth().padding(top = 14.dp), contentAlignment = Alignment.Center) {
                     Text(
                         "Dikembangkan oleh Niko EA, M.Pd",
-                        fontSize = 12.sp, fontWeight = FontWeight.Medium,
+                        fontSize = 13.sp, fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
 
             if (q.isBlank()) {
-                item { SectionTitle("Kategori", "Kelola", onManage) }
+                item { SectionTitle("Kategori", "Kelola Folder", onManage) }
                 items(cats.chunked(2)) { pair ->
                     Row(
                         Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 6.dp),
@@ -335,7 +335,7 @@ fun HomeScreen(
                 }
                 item { Spacer(Modifier.height(8.dp)); SectionTitle("Terbaru", "Lihat semua", onAll) }
                 if (docs.isEmpty()) {
-                    item { EmptyState("Belum ada dokumen", "Ketuk tombol Tambah untuk scan atau impor dokumen pertama Anda.") }
+                    item { EmptyState("Belum ada dokumen", "Ketuk tombol Tambah untuk scan atau impor dokumen Anda.") }
                 } else {
                     items(docs.take(8), key = { it.id }) { d ->
                         Box(Modifier.padding(horizontal = 20.dp, vertical = 5.dp)) {
