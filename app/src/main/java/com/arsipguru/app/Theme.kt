@@ -11,7 +11,9 @@ val Brand = Color(0xFF2563EB)
 val BrandDark = Color(0xFF0F2A6B)
 val BrandSky = Color(0xFF38BDF8)
 val Danger = Color(0xFFEF4444)
-
+val Indigo = Color(0xFF4F46E5)
+val Violet = Color(0xFF7C3AED)
+val Cyan = Color(0xFF06B6D4)
 private val LightScheme = lightColorScheme(
     primary = Brand, onPrimary = Color.White, secondary = BrandSky,
     primaryContainer = Color(0xFFDCE7FF), onPrimaryContainer = Color(0xFF0B2A6F),
